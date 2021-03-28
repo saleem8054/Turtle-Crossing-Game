@@ -8,11 +8,13 @@ class MyTurtle(Turtle):
         self.goto(0,-270)
         
     def up(self):
+        self.setheading(90)
         current_y = self.ycor()
         new_y = current_y + 10
         self.sety(new_y)
        
     def down(self):
+        self.setheading(270)
         current_y = self.ycor()
         new_y = current_y - 10
         self.sety(new_y)

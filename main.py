@@ -7,8 +7,10 @@ import time
 cars = []
 
 def create_random_cars():
-    for _ in range(15):
-        cars.append(Car((random.randint(0,240),random.randint(-240,240))))
+    for _ in range(10):
+        cars.append(Car((random.randint(-250,250),random.randint(-240,240))))
+    for _ in range(10):
+        cars.append(Car((300,random.randint(-240,240))))
     
     
 
@@ -37,8 +39,8 @@ while True:
         cars[i].move_random()
     
     for i in range(len(cars)):
-        if cars[i].xcor() < random.randint(-300,-200):
-            cars[i].goto(240,random.randint(-240,240))
+        if cars[i].xcor() < -300:
+            cars[i].goto(300,random.randint(-240,240))
             
     time.sleep(0.01)
 
